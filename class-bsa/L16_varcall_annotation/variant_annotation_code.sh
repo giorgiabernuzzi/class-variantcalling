@@ -23,4 +23,4 @@ conda install bioconda::snpsift
 
 SnpSift extractFields filtered_variants.vcf "CHROM" "POS" "ID" "GEN[*].GT" ANN[1].GENE ANN[*].EFFECT
 
-SnpSift extractFields filtered_variants.vcf "CHROM" "POS" "ID" "GEN[*].GT" ANN[1].GENE ANN[1].EFFECT
+SnpSift extractFields filtered_variants.vcf "CHROM" "POS" "ID" "GEN[*].GT" ANN[0].GENE ANN[0].EFFECT
