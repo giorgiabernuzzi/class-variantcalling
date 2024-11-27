@@ -1,0 +1,10 @@
+CHROM	POS	ID	GEN[*].GT	ANN[0].GENE	ANN[0].EFFECT
+chr21	32576780	rs541034925	1/1	0/0	TCP10L	frameshift_variant
+chr21	34792300		1/1	0/0	RUNX1	frameshift_variant
+chr21	40093843		0/1	0/0	DSCAM	stop_gained
+chr21	43741551	rs73375216	0/1	0/0	PDXK	start_lost
+chr21	44339194	rs769070783	0/1	0/0	CFAP410	start_lost
+chr21	45504485		0/1	0/0	COL18A1	frameshift_variant
+chr21	45505246		0/1	0/0	COL18A1	frameshift_variant
+chr21	45505247		0/1	0/0	COL18A1	frameshift_variant
+chr21	46122147	rs773686174	0/1	0/0	COL6A2	stop_gained
