@@ -1,0 +1,18 @@
+CHROM	POS	ID	GEN[disease].GT	GEN[normal].GT	ANN[*].GENE	ANN[*].EFFECT
+chr21	32576780	rs541034925	1/1	0/0	TCP10L,C21orf59-TCP10L,C21orf59-TCP10L,C21orf59-TCP10L	frameshift_variant,frameshift_variant,non_coding_transcript_exon_variant,non_coding_transcript_exon_variant
+chr21	33552565	.	1/1	0/0	SON,SON,SON,MIR6501,SON,SON	stop_gained,stop_gained,stop_gained,downstream_gene_variant,intron_variant,non_coding_transcript_exon_variant
+chr21	37472761	rs762466544	1/1	0/0	DYRK1A,DYRK1A,DYRK1A,DYRK1A,DYRK1A,DYRK1A,DYRK1A	start_lost,missense_variant,missense_variant,missense_variant,missense_variant,missense_variant,missense_variant
+chr21	33576378	rs34377180;rs397829693	0/1	0/0	SON,SON,DONSON,SON	frameshift_variant,frameshift_variant,downstream_gene_variant,intron_variant
+chr21	43741551	rs73375216	0/1	0/0	PDXK,PDXK	start_lost,intron_variant
+chr21	45504485	.	0/1	0/0	COL18A1,COL18A1,COL18A1	frameshift_variant,frameshift_variant,frameshift_variant
+chr21	45505247	.	0/1	0/0	COL18A1,COL18A1,COL18A1	frameshift_variant,frameshift_variant,frameshift_variant
+chr21	46411401	.	0/1	0/0	PCNT,PCNT	frameshift_variant,frameshift_variant
+CHROM	POS	ID	REF	ALT	GEN[*].GT	ANN[0].GENE	ANN[0].EFFECT
+chr21	32576780	rs541034925	A	AC	1/1,0/0	TCP10L	frameshift_variant NOT CONSTRAINT Pathogenic
+chr21	33552565	.	C	T	1/1,0/0	SON	stop_gained HIGH COSTRAINT Pathogenic
+chr21	37472761	rs762466544	A	G	1/1,0/0	DYRK1A	start_lost CONSTRAINT Benign
+chr21	33576378	rs34377180;rs397829693	G	GA	0/1,0/0	SON	frameshift_variant HIGH CONSTRAIN Benign
+chr21	43741551	rs73375216	A	G	0/1,0/0	PDXK	start_lost NOT CONSTRAIN Benign
+chr21	45504485	.	TTCGGCTCC	T	0/1,0/0	COL18A1	frameshift_variant NOT CONSTRAIN Incerto
+chr21	45505247	.	G	GGC	0/1,0/0	COL18A1	frameshift_variant NOT CONSTRAIN Benigno
+chr21	46411401	.	CTG	C	0/1,0/0	PCNT	frameshift_variant NOT CONSTRAIN Quasi benigno
