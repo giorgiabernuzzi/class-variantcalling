@@ -1,5 +1,8 @@
 ## clone repository crea la cartella class-variantcalling in modo da mantenere il codice
-cd /workspaces/class-variantcalling
+
+mkdir -p class-variantcalling
+cd class-variantcalling
+###cd /workspaces/class-variantcalling
 mkdir -p analysis
 cd analysis
 
@@ -8,17 +11,19 @@ mkdir -p raw_data
 cd raw_data
 
 ## tasto destro su datiesame> copypath> e poi cd e incollo il path (cd /config/workspace/datiesame)
-tar -xzvf data_resequencing.tar.gz 
 
-##sposto poi i dati manualmente
-cd .. 
+
+tar -xzvf /config/workspace/datiesame/data-resequencing.tar.gz -C .
+
 
 ##vado in analysis e creo un'altra cartella
+cd ..
 mkdir -p alignment
 cd alignment
 
 ## now we can perform the alignment with BWA
 ##Controllare sempre il path e i nomi
+
 bwa mem \
 -t 2 \
 -R "@RG\tID:sim\tSM:normal\tPL:illumina\tLB:sim" \
@@ -94,10 +99,12 @@ gatk ApplyBQSR \
    -O disease_recal.bam
 
 ### variant calling
+####devo rimanere dentro ad analysis e creare variants
+###DENTRO ANALYSIS CREO VARIANTS
 
-cd /workspaces/class-variantcalling
-mkdir -p analysis/variants
-cd analysis/variants
+cd ..
+mkdir -p variants
+cd variants
 
 
 ## first single sample discovery
@@ -136,6 +143,14 @@ gatk --java-options "-Xmx4g" GenotypeGVCFs \
    -O results.vcf.gz
    
 #### ANNOTATE THE SAMPLE
+########mkdir -p /config/workspace/class-variantcalling/analysis/variants/cache
+####cd /config/workspace/class-variantcalling/analysis/variants
+
+## download hg38 (UCSC) version of database
+#######snpEff download -v hg38 -dataDir /config/workspace/class-variantcalling/analysis/variants/cache
+
+
+
 
 ### to execute snpeff we need to contain the memory
 snpEff -Xmx4g ann -dataDir /config/workspace/snpeff_data -v hg38 results.vcf.gz >results_ann.vcf
