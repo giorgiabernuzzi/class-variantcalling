@@ -1,8 +1,9 @@
 ## clone repository crea la cartella class-variantcalling in modo da mantenere il codice
+###cd /workspaces/class-variantcalling
 
 mkdir -p class-variantcalling
 cd class-variantcalling
-###cd /workspaces/class-variantcalling
+
 mkdir -p analysis
 cd analysis
 
@@ -13,7 +14,7 @@ cd raw_data
 ## tasto destro su datiesame> copypath> e poi cd e incollo il path (cd /config/workspace/datiesame)
 
 
-tar -xzvf /config/workspace/datiesame/data-resequencing.tar.gz -C .
+tar -xzvf /config/workspace/datiesame/data_resequencing.tar.gz -C .
 
 
 ##vado in analysis e creo un'altra cartella
