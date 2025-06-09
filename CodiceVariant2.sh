@@ -6,7 +6,8 @@ cd analysis
 ## sym link so we do not change the repository itself
 mkdir -p raw_data
 cd raw_data
-ln -s /workspaces/class-variantcalling/datasets-class-variantcalling/reads/*.gz .
+tar -xvzf /workspace/class-variantcalling/datiesame/data_resequencing.tar.gz -C .
+####ln -s /workspaces/class-variantcalling/datasets-class-variantcalling/reads/*.gz .
 cd ..
 mkdir -p alignment
 cd alignment
