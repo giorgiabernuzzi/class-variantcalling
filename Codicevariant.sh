@@ -1,12 +1,18 @@
-## clone repository
-cd /workspaces/class-variantcalling
+## clone repository, crea la cartella class-variantcalling
+###cd /workspace/class-variantcalling
+
+mkdir -p class-variantcalling
+cd class-variantcalling
+
 mkdir -p analysis
 cd analysis
 
-## sym link so we do not change the repository itself
 mkdir -p raw_data
 cd raw_data
-ln -s /workspaces/class-variantcalling/datasets-class-variantcalling/reads/*.gz .
+
+tar -xvzf /workspace/class-variantcalling/datiesame/data_resequencing.tar.gz -C .
+
+##vado in analyisis e creo un altra cartella dentro analysis
 cd ..
 mkdir -p alignment
 cd alignment
@@ -88,14 +94,14 @@ gatk ApplyBQSR \
    -O disease_recal.bam
 
 
-tar -zvcf alignments.tar.gz *_recal.b*
 
 
 ### variant calling
+###dentro analysis creo variants
 
-cd /workspaces/class-variantcalling
-mkdir -p analysis/variants
-cd analysis/variants
+cd ..
+mkdir -p variants
+cd variants
 
 
 ## first single sample discovery
@@ -163,6 +169,7 @@ snpEff download -v hg38 -dataDir /workspaces/class-variantcalling/analysis/varia
 ### to execute snpeff we need to contain the memory
 snpEff -Xmx4g ann -dataDir /workspaces/class-variantcalling/analysis/variants/cache -v hg38 results.vcf.gz >results_ann.vcf
 
+#########all'esame snpEff -Xmx4g ann -dataDir /config/workspace/snpeff_data -v hg38 results.vcf.gz >results_ann.vcf
 
 ### filter variants
 
