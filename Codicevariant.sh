@@ -1,5 +1,5 @@
 ## clone repository, crea la cartella class-variantcalling
-###cd /workspace/class-variantcalling
+###cd /config/workspace
 
 mkdir -p class-variantcalling
 cd class-variantcalling
