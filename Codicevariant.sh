@@ -1,4 +1,8 @@
 ## clone repository, crea la cartella class-variantcalling
+#####percorso dati -> config/workspace/datiesame/data_resequencing.tar.gz
+#####percorso raw_data --> config/workspace/class-variantcalling/analysis/raw_data
+###percorso reference -> config/workspace/datiesame/reference
+
 ###pwd /config/workspace
 
 mkdir -p class-variantcalling
@@ -10,7 +14,7 @@ cd analysis
 mkdir -p raw_data
 cd raw_data
 
-tar -xvzf /workspace/class-variantcalling/datiesame/data_resequencing.tar.gz -C .
+tar -xvzf /config/workspace/datiesame/data_resequencing.tar.gz -C .
 
 ##vado in analyisis e creo un altra cartella dentro analysis
 cd ..
